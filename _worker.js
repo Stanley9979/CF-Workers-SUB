@@ -1,7 +1,7 @@
 
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
-let mytoken = 'auto';
+let mytoken = '866136';
 let guestToken = ''; //可以随便取，或者uuid生成，https://1024tools.com/uuid
 let BotToken = ''; //可以为空，或者@BotFather中输入/start，/newbot，并关注机器人
 let ChatID = ''; //可以为空，或者@userinfobot中获取，/start
@@ -13,10 +13,15 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
-https://cfxr.eu.org/getSub
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIlVTNSIsDQogICJhZGQiOiAiMTQyLjE3MS4yMjIuMTE0IiwNCiAgInBvcnQiOiAiMzY2MzYiLA0KICAiaWQiOiAiYjcxZWZlOGItMzAyNi00NzdiLWE2MjgtMTFkNmQyYWU4YmI3IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJ1czUuYWxsNGZyZWUudXMiLA0KICAicGF0aCI6ICIvVXFHbzRNaEdSNiIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiDQp9
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkhLbWluaSIsDQogICJhZGQiOiAiMjA2LjIzNy4yMC4xMzIiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiZTM2OTQ0MTItMjFmOC00N2RjLWJiOTYtYmY1Zjk0NGMxNTNlIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJtaW4uYWxsNGZyZWUudXMiLA0KICAicGF0aCI6ICIvVHVoRDZUMnBhbHJBIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiINCn0=
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIkhLMShkaXNuZXkpIiwNCiAgImFkZCI6ICJoazEuYWxsNGZyZWUudXMiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiM2I1ZDc3YmMtYjZmOC00ZjgxLWEwMDctMzE5MWZiMzhhMWM1IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJoazEuYWxsNGZyZWUudXMiLA0KICAicGF0aCI6ICIvM2I1ZDc3YmMtYjZmOC00ZjgxLWEwMDctMzE5MWZiMzhhMWM1IiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiINCn0=
+trojan://796ca17f-fd01-4a22-870a-57de94a25b85@zzz.all4free.us:443?security=tls&type=ws&host=zzz.all4free.us&path=%2F796ca17f-fd01-4a22-870a-57de94a25b85#US1
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8443?encryption=none&security=tls&sni=abc2-55m.pages.dev&fp=random&type=ws&host=abc2-55m.pages.dev&path=%2F%3Fed%3D2560#SG1
+vless://c61950ca-6df3-48ea-8f22-cf412af7b171@www.visa.com.sg:8443?encryption=none&security=tls&sni=hkg-en5.pages.dev&fp=random&type=ws&host=hkg-en5.pages.dev&path=%2F%3Fed%3D2560#%E5%A5%88%E9%A3%9EHK
 `;
 
-let urls = [];
+let urls = ['https://new3-513.pages.dev/c61950ca-6df3-48ea-8f22-cf412af7b171?sub'];
 let subConverter = "SUBAPI.cmliussss.net"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subConfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
 let subProtocol = 'https';
@@ -825,4 +830,5 @@ async function KV(request, env, txt = 'ADD.txt', guest) {
 			headers: { "Content-Type": "text/plain;charset=utf-8" }
 		});
 	}
+
 }
